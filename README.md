@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![StreamBot last commit](https://img.shields.io/github/last-commit/BlackPearlsDev/StreamBot-Pearl?style=for-the-badge) ![StreamBot version](https://img.shields.io/github/package-json/v/BlackPearlsDev/StreamBot-Pearl?style=for-the-badge) ![StreamBot size](https://img.shields.io/github/repo-size/BlackPearlsDev/StreamBot-Pearl?style=for-the-badge) ![StreamBot license](https://img.shields.io/github/license/BlackPearlsDev/StreamBot-Pearl?style=for-the-badge)
+![StreamBot last commit](https://img.shields.io/github/last-commit/BlackPearlsDev/StreamBot-Pearl?style=for-the-badge) ![StreamBot version](https://img.shields.io/github/package-json/v/BlackPearlsDev/StreamBot-Pearl?style=for-the-badge) ![StreamBot size](https://img.shields.io/github/repo-size/BlackPearlsDev/StreamBot-Pearl?style=for-the-badge) ![StreamBot license](https://img.shields.io/badge/LICENSE-MIT-yellow?style=for-the-badge)
 
 </div>
 
