@@ -17,7 +17,10 @@ npm install
 ```
 
 ## Configuration
+```bash
 Find file `.env` and fill in the values.
+Then go to `channel.config.json` and enter your channel name.
+```
 
 ## Usage
 ```bash
