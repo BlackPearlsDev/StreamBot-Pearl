@@ -84,8 +84,7 @@ async function checkLiveStatus() {
 
                             announcementChannel.send({ embeds: [embed], content: 'Le stream est lancé, on vous y attend !\n\n@everyone' });
                             liveStatus[i] = true;
-                            console.log('liveStatus AFTER LAUNCH:', liveStatus);
-                            console.log(`Annonce envoyée pour le stream ${data[0].user_name}!`);
+                            console.log(`Annonce envoyée pour le stream ${data[0].user_name} !`);
                         } else {
                             console.error(`Le channel avec l'ID ${channelID} est introuvable.`);
                         }
@@ -112,7 +111,7 @@ async function getTwitchAccessToken() {
 
 // // BOT SECTION
 client.on('ready', () => {
-    console.log(`Connecté en tant que ${client.user.tag}`);
+    console.log(`${client.user.tag} à été lancé, prêt à vérifier les chaînes Twitch !`);
     checkLiveStatus();
 });
 
