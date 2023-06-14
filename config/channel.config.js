@@ -1,6 +1,5 @@
 TWITCH_CHANNEL = [
-    'monstercat',
-    'fire_kitchen',
+    'blackpearls',
     // add your channel here
 ]
 

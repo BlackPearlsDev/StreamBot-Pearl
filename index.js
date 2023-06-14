@@ -8,7 +8,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 console.log('Nombre de chaînes Twitch:', TWITCH_CHANNEL.length);
 
 // DISCORD SECTION
-const channelID = ''; // ID of the channel where the bot will send the announcement
+const channelID = process.env.CHANNEL_ID; // ID of the channel where the bot will send the announcement
 
 // TWITCH SECTION
 let profileImg = [];
