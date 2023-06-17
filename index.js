@@ -1,7 +1,7 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder, SlashCommandBuilder } = require('discord.js');
 const axios = require('axios');
-const { TWITCH_CHANNEL } = require('./config/channel.config.js');
+const { TWITCH_CHANNEL, CHANNEL_LINK_ADVERT } = require('./config/channel.config.js');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
@@ -95,7 +95,7 @@ async function checkLiveStatus() {
             console.error('Erreur lors de la vérification de l\'état de la chaîne Twitch :', error);
         }
 
-        setTimeout(checkLiveStatus, 30000); // We call the function every 30 seconds to check if the channel is live
+        setTimeout(checkLiveStatus, 300000); // We call the function every 5 minutes to check if the channel is live
     } else {
         console.log('Aucune chaîne Twitch à vérifier, ajoutez là dans la config.');
     }
@@ -110,9 +110,28 @@ async function getTwitchAccessToken() {
 }
 
 // // BOT SECTION
-client.on('ready', () => {
+client.on('ready', async () => {
     console.log(`${client.user.tag} à été lancé, prêt à vérifier les chaînes Twitch !`);
     checkLiveStatus();
+
+    client.user.setPresence({
+        activities: [
+            {
+                name: 'Black Pearl',
+            },
+        ],
+        status: 'online',
+    });
+});
+
+
+// Interaction command
+client.on('interactionCreate', (interaction) => {
+    if(!interaction.isChatInputCommand()) return;
+
+    if(interaction.commandName === 'channel') {
+        interaction.reply(CHANNEL_LINK_ADVERT);
+    }
 });
 
 client.login(process.env.DISCORD_TOKEN);

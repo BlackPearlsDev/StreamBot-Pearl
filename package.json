@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Black Pearl",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
